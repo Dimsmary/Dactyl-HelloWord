@@ -48,7 +48,7 @@
 
 为了节省打板费用，我将25个按键PCB拼板到了一个10x10cm的PCB上。
 
-![pcb1](image\pcb1.png)
+![pcb1](image/pcb1.png)
 
 注意，这25个按键PB并不是一样的，而是分为了3号PCB、2号PCB以及1号PCB。
 
