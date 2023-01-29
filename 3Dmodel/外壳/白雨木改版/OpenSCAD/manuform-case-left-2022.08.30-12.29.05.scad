@@ -27772,41 +27772,31 @@ mirror ([-1, 0, 0]) {
           translate ([-103.34286136648323, 22.23302150067547, 1.9]) {
             union () {
               cylinder (h=3.8, r1=2.655, r2=2.55, center=true);
-              translate ([0, 0, 1.9]) {
-                sphere (r=2.55);
-              }
+              
             }
           }
           translate ([-102.64499467510858, -28.07034602407177, 1.9]) {
             union () {
               cylinder (h=3.8, r1=2.655, r2=2.55, center=true);
-              translate ([0, 0, 1.9]) {
-                sphere (r=2.55);
-              }
+              
             }
           }
           translate ([-39.07237946816516, -65.38594773180799, 1.9]) {
             union () {
               cylinder (h=3.8, r1=2.655, r2=2.55, center=true);
-              translate ([0, 0, 1.9]) {
-                sphere (r=2.55);
-              }
+              
             }
           }
           translate ([-23.171221288094387, 40.118399838442805, 1.9]) {
             union () {
               cylinder (h=3.8, r1=2.655, r2=2.55, center=true);
-              translate ([0, 0, 1.9]) {
-                sphere (r=2.55);
-              }
+              
             }
           }
           translate ([36.599847998918456, -12.746699336961662, 1.9]) {
             union () {
               cylinder (h=3.8, r1=2.655, r2=2.55, center=true);
-              translate ([0, 0, 1.9]) {
-                sphere (r=2.55);
-              }
+              
             }
           }
         }
