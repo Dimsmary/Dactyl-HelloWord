@@ -1,3 +1,5 @@
+$fn=32;//最好是4的倍数
+
 difference () {
   linear_extrude (height=3, center=true){
     difference () {
