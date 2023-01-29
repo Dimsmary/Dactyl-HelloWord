@@ -1,3 +1,5 @@
+$fn=32;//最好是4的倍数
+
 mirror ([-1, 0, 0]) {
   difference () {
     union () {
