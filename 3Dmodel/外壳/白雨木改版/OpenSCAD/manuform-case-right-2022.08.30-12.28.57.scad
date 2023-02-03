@@ -27728,43 +27728,53 @@ difference () {
         }
         union () {
           translate ([-103.34286136648323, 22.23302150067547, 2.65]) {
+            color ("black"){
             union () {
               cylinder (h=5.3, r1=4.255, r2=4.15, center=true);
               translate ([0, 0, 2.65]) {
                 sphere (r=4.15);
               }
+            }
             }
           }
           translate ([-102.64499467510858, -28.07034602407177, 2.65]) {
+            color ("white"){
             union () {
               cylinder (h=5.3, r1=4.255, r2=4.15, center=true);
               translate ([0, 0, 2.65]) {
                 sphere (r=4.15);
               }
+            }
             }
           }
           translate ([-39.07237946816516, -65.38594773180799, 2.65]) {
+            color ("red"){
             union () {
               cylinder (h=5.3, r1=4.255, r2=4.15, center=true);
               translate ([0, 0, 2.65]) {
                 sphere (r=4.15);
               }
+            }
             }
           }
           translate ([-23.171221288094387, 40.118399838442805, 2.65]) {
+            color ("blue"){
             union () {
               cylinder (h=5.3, r1=4.255, r2=4.15, center=true);
               translate ([0, 0, 2.65]) {
                 sphere (r=4.15);
               }
             }
+            }
           }
           translate ([36.599847998918456, -12.746699336961662, 2.65]) {
+            color ("green"){
             union () {
               cylinder (h=5.3, r1=4.255, r2=4.15, center=true);
               translate ([0, 0, 2.65]) {
                 sphere (r=4.15);
               }
+            }
             }
           }
         }
