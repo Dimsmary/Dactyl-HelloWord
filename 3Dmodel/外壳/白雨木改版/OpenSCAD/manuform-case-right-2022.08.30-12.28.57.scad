@@ -27727,7 +27727,7 @@ difference () {
           }
         }
         union () {
-          translate ([-101.5, 22.23302150067547, 2.65]) {
+          translate ([-101.8, 22.23302150067547, 2.65]) {
             color ("black"){
             union () {
               cylinder (h=5.3, r1=4.255, r2=4.15, center=true);
@@ -27780,7 +27780,7 @@ difference () {
         }
       }
       union () {
-        translate ([-101.5, 22.23302150067547, 1.9]) {
+        translate ([-101.8, 22.23302150067547, 1.9]) {
           union () {
             cylinder (h=3.8, r1=2.35, r2=2.25, center=true);
             
