@@ -27782,31 +27782,31 @@ difference () {
       union () {
         translate ([-103.34286136648323, 22.23302150067547, 1.9]) {
           union () {
-            cylinder (h=3.8, r1=2.655, r2=2.55, center=true);
+            cylinder (h=3.8, r1=2.35, r2=2.25, center=true);
             
           }
         }
         translate ([-102.64499467510858, -28.07034602407177, 1.9]) {
           union () {
-            cylinder (h=3.8, r1=2.655, r2=2.55, center=true);
+            cylinder (h=3.8, r1=2.35, r2=2.25, center=true);
             
           }
         }
         translate ([-39.07237946816516, -65.38594773180799, 1.9]) {
           union () {
-            cylinder (h=3.8, r1=2.655, r2=2.55, center=true);
+            cylinder (h=3.8, r1=2.35, r2=2.25, center=true);
             
           }
         }
         translate ([-23.171221288094387, 40.118399838442805, 1.9]) {
           union () {
-            cylinder (h=3.8, r1=2.655, r2=2.55, center=true);
+            cylinder (h=3.8, r1=2.35, r2=2.25, center=true);
             
           }
         }
         translate ([36.599847998918456, -12.746699336961662, 1.9]) {
           union () {
-            cylinder (h=3.8, r1=2.655, r2=2.55, center=true);
+            cylinder (h=3.8, r1=2.35, r2=2.25, center=true);
             
           }
         }
