@@ -87,25 +87,79 @@ public:
 
 
     int16_t keyMap[KEYMAP_NUM][IO_NUMBER] = {
-        // The first layer, used for aligning 74HC165 IO pins to PCB key layout
-        {0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,
-                14, 15,16,17,18,19,20,21,22,23,24,25,26,27,28,
-                29,30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42,
-                43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
-                57, 58,59, 60, 61, 62, 63},
+        /* 
+        左右各4个74HC165，有4*2*8 =64个IO，故映射列表有64位而不是56位。
 
-        // Other layer, used for mapping default key layout to custom layout
-        {ESC, F1, F2, BACKSLASH, ENTER, LEFT_U_BRACE, RIGHT_U_BRACE, BACKSPACE, PERIOD, SLASH, RIGHT_SHIFT, N,M,COMMA,
-            L, SEMI_COLON, QUOTE, H, J, K, O, P, MINUS, Y,U,I, NUM_9, NUM_0, EQUAL,
-                NUM_6, NUM_7, NUM_8,E,R,T,Y,LEFT_ALT,SPACE,LEFT_GUI,ESC,C,V,B, LEFT_CTRL,
-            Z, X,D,F,G,CAP_LOCK, A,S,E,R,T, TAB, Q,W,
-            NUM_3, NUM_4, NUM_5,GRAVE_ACCENT, NUM_1, NUM_2,},
+        每行有几个数字，就代表左（右）板上的4、6FPC座之间要串几个轴板。例如 “//FPC18 to FPC10”这行就只有三个数字“5、6、7”，代表其连接顺序为 FPC10➡️ U3➡️U2➡️U1 ➡️FPC18。而每行数字，由左至右分别是6P、5P、4P。
 
-            {ESC, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, PAUSE,
-            GRAVE_ACCENT, NUM_1, NUM_2, NUM_3, NUM_4, NUM_5, NUM_6, NUM_7, NUM_8, NUM_9, NUM_0, MINUS, EQUAL, BACKSPACE, INSERT,
-            TAB, Q,W,E,R,T,Y,U,I,O,P,LEFT_U_BRACE, RIGHT_U_BRACE, BACKSLASH, DELETE,
-            CAP_LOCK, A,S,D,F,G,H,J,K,L,SEMI_COLON, QUOTE, ENTER, PAGE_UP,
-            LEFT_SHIFT, Z,X,C,V,B,}
+        有规律的连接只对其头行、尾行注释，以便阅读区分。
+        */
+
+        {/*第0层*/
+            //右扩展板
+            0 , 1 , 2 , 3, //最左边没连按键的4个IO
+            4 ,         //FPC19 U1轴板
+            5 , 6 , 7 , //FPC10 to FPC18
+            8 , 9 , 10, 
+            11, 12, 13, 
+            14, 15, 16, //FPC7 to FPC15
+            17, 18, 19, //FPC5 to FPC14
+            20, 21, 22, 
+            23, 24, 25, 
+            26, 27, 28, //FPC2 to FPC11
+            29, 30, 31, //FPC6 to FPC1
+                            
+            //左主控板
+            32, 33, 34, 35, //最左边没连按键的4个IO
+            36,         //FPC1 to FPC11 U1轴板
+            37, 38, 39, //FPC2 to FPC12
+            40, 41, 42, 
+            43, 44, 45, 
+            46, 47, 48, 
+            49, 50, 51, 
+            52, 53, 54, 
+            55, 56, 57, 
+            58, 59, 60, 
+            61, 62, 63  //FPC10 to FPC20
+        },
+
+        /*
+        第1层的按键布局列表，会对应其所在的位数，映射到第0层io位数
+        */
+        
+        {/*第1层*/
+            //右主控板
+            ESC, F1, F2, BACKSLASH, //最左边没连按键的4个IO
+            ENTER, 
+            LEFT_U_BRACE, RIGHT_U_BRACE, BACKSPACE, 
+            PERIOD, SLASH, RIGHT_SHIFT, 
+            N, M, COMMA, 
+            L, SEMI_COLON, QUOTE, 
+            H, J, K, 
+            O, P, MINUS, 
+            Y, U, I, 
+            NUM_9, NUM_0, EQUAL, 
+            NUM_6, NUM_7, NUM_8, 
+
+            //左主控板
+            E, R, T, Y, //最左边没连按键的4个IO
+            LEFT_ALT, 
+            SPACE, LEFT_GUI, ESC, 
+            C, V, B, 
+            LEFT_CTRL, Z, X, 
+            D, F, G, 
+            CAP_LOCK, A, S, 
+            E, R, T, 
+            TAB, Q, W, 
+            NUM_3, NUM_4, NUM_5, 
+            GRAVE_ACCENT, NUM_1, NUM_2
+        },
+
+            /*
+            {
+
+            }
+            */
     };
 
     volatile bool isRgbTxBusy{};
