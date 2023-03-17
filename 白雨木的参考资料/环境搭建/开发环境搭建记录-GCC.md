@@ -66,8 +66,11 @@ See also "/Volumes/SanDisk/Byme/Dactyl-HelloWord/Dactyl-HelloWord/Firmware/Byvm/
 5. VScode (闭源软件，基于开源的Code OSS)
 
 VSCode插件：
-1. C/C++（代码公开，但非自由软件）（可使用Clangd替代，但代码提示有错误）
+1. C/C++（代码公开，但非自由软件）（可使用Clangd替代，但代码有少量错误提示）
 2. CMake
 3. CMake Tools
 
 主要参考了稚晖君的这篇[文章](https://zhuanlan.zhihu.com/p/145801160)。
+
+230317
+微软的C/C++插件没有跳转提示，所以才没有错误？
