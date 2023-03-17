@@ -90,37 +90,42 @@ public:
         /* 
         左右各4个74HC165，有4*2*8 =64个IO，故映射列表有64位而不是56位。
 
-        每行有几个数字，就代表左（右）板上的4、6FPC座之间要串几个轴板。例如 “//FPC18 to FPC10”这行就只有三个数字“5、6、7”，代表其连接顺序为 FPC10➡️ U3➡️U2➡️U1 ➡️FPC18。而每行数字，由左至右分别是6P、5P、4P。
-
-        有规律的连接只对其头行、尾行注释，以便阅读区分。
+        每行有几个数字，就代表左（右）板上的4、6FPC座之间要串几个轴板。例如 “//FPC18 to FPC10”这行就只有三个数字“5、6、7”，代表其连接顺序为 FPC10➡️ U3➡️U2➡️U1 ➡️FPC18。而每行数字，由左至右分别是U3、U2、U1。
         */
 
         {/*第0层*/
             //右扩展板
-            0 , 1 , 2 , 3, //最左边没连按键的4个IO
-            4 ,         //FPC19 U1轴板
-            5 , 6 , 7 , //FPC10 to FPC18
+            0 , 1 , 2 , 3 , //最左边没连按键的4个IO
+
+            //FPC2  to FPC11 //FPC5  to FPC14
+            26, 27, 28,      17, 18, 19, 
+            //FPC6  to FPC1  //FPC4  to FPC13 
+            29, 30, 31,      20, 21, 22, 
+            //FPC3  to FPC12 //FPC10 to FPC18
+            23, 24, 25,      5 , 6 , 7 , 
+            //FPC8  to FPC16 //FPC7  to FPC15
+            11, 12, 13,      14, 15, 16, 
+            //FPC9 to FPC17
             8 , 9 , 10, 
-            11, 12, 13, 
-            14, 15, 16, //FPC7 to FPC15
-            17, 18, 19, //FPC5 to FPC14
-            20, 21, 22, 
-            23, 24, 25, 
-            26, 27, 28, //FPC2 to FPC11
-            29, 30, 31, //FPC6 to FPC1
-                            
+            //FPC19
+            4 , 
+
+
             //左主控板
             32, 33, 34, 35, //最左边没连按键的4个IO
-            36,         //FPC1 to FPC11 U1轴板
-            37, 38, 39, //FPC2 to FPC12
-            40, 41, 42, 
-            43, 44, 45, 
-            46, 47, 48, 
-            49, 50, 51, 
-            52, 53, 54, 
-            55, 56, 57, 
-            58, 59, 60, 
-            61, 62, 63  //FPC10 to FPC20
+
+            //FPC10 to FPC20 //FPC7  to FPC17
+            61, 62, 63,      52, 53, 54, 
+            //FPC9  to FPC19 //FPC8  to FPC18
+            58, 59, 60,      55, 56, 57, 
+            //FPC5  to FPC15 //FPC6  to FPC16
+            46, 47, 48,      49, 50, 51, 
+            //FPC3  to FPC13 //FPC4  to FPC14
+            40, 41, 42,      43, 44, 45, 
+            //FPC2 to FPC12
+            37, 38, 39, 
+            //FPC1 to FPC11
+            36, 
         },
 
         /*
@@ -130,29 +135,21 @@ public:
         {/*第1层*/
             //右主控板
             ESC, F1, F2, BACKSLASH, //最左边没连按键的4个IO
-            ENTER, 
+            NUM_6, NUM_7, NUM_8, NUM_9, NUM_0, EQUAL, 
+            Y, U, I, O, P, MINUS,
+            H, J, K, L, SEMI_COLON, QUOTE,
+            N, M, COMMA, PERIOD, SLASH, RIGHT_SHIFT,
             LEFT_U_BRACE, RIGHT_U_BRACE, BACKSPACE, 
-            PERIOD, SLASH, RIGHT_SHIFT, 
-            N, M, COMMA, 
-            L, SEMI_COLON, QUOTE, 
-            H, J, K, 
-            O, P, MINUS, 
-            Y, U, I, 
-            NUM_9, NUM_0, EQUAL, 
-            NUM_6, NUM_7, NUM_8, 
-
+            ENTER, 
+            
             //左主控板
             E, R, T, Y, //最左边没连按键的4个IO
-            LEFT_ALT, 
+            GRAVE_ACCENT, NUM_1, NUM_2, NUM_3, NUM_4, NUM_5,
+            TAB, Q, W, E, R, T, 
+            CAP_LOCK, A, S, D, F, G, 
+            LEFT_CTRL, Z, X, C, V, B, 
             SPACE, LEFT_GUI, ESC, 
-            C, V, B, 
-            LEFT_CTRL, Z, X, 
-            D, F, G, 
-            CAP_LOCK, A, S, 
-            E, R, T, 
-            TAB, Q, W, 
-            NUM_3, NUM_4, NUM_5, 
-            GRAVE_ACCENT, NUM_1, NUM_2
+            LEFT_ALT, 
         },
 
             /*
