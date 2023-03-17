@@ -107,7 +107,7 @@ public:
             23, 24, 25,      5 , 6 , 7 , 
             //FPC8  to FPC16 //FPC7  to FPC15
             11, 12, 13,      14, 15, 16, 
-            //FPC9 to FPC17
+            //FPC9  to FPC17
             8 , 9 , 10, 
             //FPC19
             4 , 
@@ -124,9 +124,9 @@ public:
             46, 47, 48,      49, 50, 51, 
             //FPC3  to FPC13 //FPC4  to FPC14
             40, 41, 42,      43, 44, 45, 
-            //FPC2 to FPC12
+            //FPC2  to FPC12
             37, 38, 39, 
-            //FPC1 to FPC11
+            //FPC1  to FPC11
             36, 
         },
 
