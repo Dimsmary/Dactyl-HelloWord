@@ -133,7 +133,7 @@ public:
         */
         
         {/*第1层*/
-            //右主控板
+            //右扩展板
             ESC, F1, F2, BACKSLASH, //最左边没连按键的4个IO
             NUM_6, NUM_7, NUM_8, NUM_9, NUM_0, EQUAL, 
             Y, U, I, O, P, MINUS,
