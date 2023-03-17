@@ -1,3 +1,4 @@
 ._*
 *.FCStd1
 .cache/*
+build/*
