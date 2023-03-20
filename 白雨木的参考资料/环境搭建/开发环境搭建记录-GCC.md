@@ -74,3 +74,46 @@ VSCode插件：
 
 230317
 微软的C/C++插件没有跳转提示，所以才没有错误？
+
+通过控制变量，在相同的配置文件、相同的编译工具下编译，通过对比Clion和VSCode所编译的二进制，可知二进制代码完全相同，并未因编辑器不同而导致编译差异。
+
+230318
+```
+[variant] Loaded new set of variants
+[kit] Successfully loaded 2 kits from /Users/byvm/.local/share/CMakeTools/cmake-tools-kits.json
+[proc] Executing command: /usr/local/bin/cmake --version
+[proc] Executing command: /usr/local/bin/gcc-12 -v
+[proc] The command: ninja --version failed with error: Error: spawn ninja ENOENT
+[proc] The command: ninja-build --version failed with error: Error: spawn ninja-build ENOENT
+[main] Configuring project: Byvm 
+[proc] Executing command: /usr/local/bin/cmake --no-warn-unused-cli -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_C_COMPILER:FILEPATH=/usr/local/bin/gcc-12 -DCMAKE_CXX_COMPILER:FILEPATH=/usr/local/bin/g++-12 -S/Volumes/SanDisk/Byme/Dactyl-HelloWord/Dactyl-HelloWord/Firmware/Byvm/HelloWord-Keyboard-fw -B/Volumes/SanDisk/Byme/Dactyl-HelloWord/Dactyl-HelloWord/Firmware/Byvm/build -G "Unix Makefiles"
+[cmake] Not searching for unused variables given on the command line.
+[cmake] -- Maximum optimization for speed
+[cmake] -- Configuring done (0.0s)
+[cmake] You have changed variables that require your cache to be deleted.
+[cmake] Configure will be re-run and you may have to reset some variables.
+[cmake] The following variables have changed:
+[cmake] CMAKE_C_COMPILER= /usr/local/bin/gcc-12
+[cmake] CMAKE_CXX_COMPILER= /usr/local/bin/g++-12
+[cmake] 
+[cmake] -- The C compiler identification is GNU 10.3.1
+[cmake] -- The CXX compiler identification is GNU 10.3.1
+[cmake] -- The ASM compiler identification is GNU
+[cmake] -- Found assembler: /Applications/ARM/bin/arm-none-eabi-gcc
+[cmake] -- Detecting C compiler ABI info
+[cmake] -- Detecting C compiler ABI info - done
+[cmake] -- Check for working C compiler: /Applications/ARM/bin/arm-none-eabi-gcc - skipped
+[cmake] -- Detecting C compile features
+[cmake] -- Detecting C compile features - done
+[cmake] -- Detecting CXX compiler ABI info
+[cmake] -- Detecting CXX compiler ABI info - done
+[cmake] -- Check for working CXX compiler: /Applications/ARM/bin/arm-none-eabi-g++ - skipped
+[cmake] -- Detecting CXX compile features
+[cmake] -- Detecting CXX compile features - done
+[cmake] -- Minimal optimization, debug info included
+[cmake] -- Configuring done (1.6s)
+[cmake] -- Generating done (0.8s)
+[cmake] -- Build files have been written to: /Volumes/SanDisk/Byme/Dactyl-HelloWord/Dactyl-HelloWord/Firmware/Byvm/build
+```
+
+虽然可以编译了，但是注意到提示中有一个error,VSCode的提示没有颜色区分真令人头痛。不过不影响，因为稚晖君的开发环境也没有这个ninja。
