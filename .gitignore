@@ -1,6 +1,7 @@
 ._*
 *.FCStd1
 .cache/*
+Firmware/Byvm/.cache/*
 
 #工作根目录下的build，也可以在打开根目录时不点击CMakelists.text，这样build就不会生成在根目录。
 build/*
