@@ -117,3 +117,19 @@ VSCode插件：
 ```
 
 虽然可以编译了，但是注意到提示中有一个error,VSCode的提示没有颜色区分真令人头痛。不过不影响，因为稚晖君的开发环境也没有这个ninja。
+
+230321
+使用C/C++插件需要在Settings.json里配置这个选项为默认（这个参考https://www.bilibili.com/video/BV1gD4y1y7um）
+```
+"C_Cpp.intelliSenseEngine": "default"
+```
+
+然后要更改C/C++插件使用的编译器，在 Byvm/.vscode/c_cpp_properties.json
+```
+"compilerPath": "/usr/local/bin/gcc-12"
+```
+
+这样就解决这个问题了（如果使用arm-none-eabi-gcc或clang就会有这个问题）：
+```
+没有找到库：stdint-gcc.h
+```
