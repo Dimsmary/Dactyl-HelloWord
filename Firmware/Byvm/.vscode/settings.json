@@ -1,3 +1,11 @@
 {
-    "cmake.sourceDirectory": "${workspaceFolder}/HelloWord-Keyboard-fw"
+    "cmake.sourceDirectory": "${workspaceFolder}/HelloWord-Keyboard-fw",
+    "files.associations": {
+        "common_inc.h": "c",
+        "usbd_customhid.h": "c",
+        "stdint-gcc.h": "c",
+        "usart.h": "c",
+        "stm32f1xx_hal.h": "c",
+        "main.h": "c"
+    }
 }
