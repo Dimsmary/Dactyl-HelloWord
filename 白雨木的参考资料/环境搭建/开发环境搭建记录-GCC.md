@@ -117,3 +117,24 @@ VSCode插件：
 ```
 
 虽然可以编译了，但是注意到提示中有一个error,VSCode的提示没有颜色区分真令人头痛。不过不影响，因为稚晖君的开发环境也没有这个ninja。
+
+230321
+使用C/C++插件需要在Settings.json里配置这个选项为默认（这个参考https://www.bilibili.com/video/BV1gD4y1y7um）
+```
+"C_Cpp.intelliSenseEngine": "default"
+```
+
+然后要更改C/C++插件使用的编译器，在 Byvm/.vscode/c_cpp_properties.json
+```
+"compilerPath": "/Applications/ARM/bin/arm-none-eabi-gcc"
+```
+
+用DACTYL-HWLLOWORD做工作根目录打开main.c会出现以下问题，但以Byvm做根目录则不会。
+```
+没有找到库：stdint-gcc.h
+```
+
+当然，可以手动添加库路径
+```
+/Applications/ARM/lib/gcc/arm-none-eabi/10.3.1/include/stdint-gcc.h
+```
