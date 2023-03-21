@@ -126,6 +126,7 @@ VSCode插件：
 
 然后要更改C/C++插件使用的编译器，在 Byvm/.vscode/c_cpp_properties.json
 ```
+<<<<<<< HEAD
 "compilerPath": "/Applications/ARM/bin/arm-none-eabi-gcc"
 ```
 
@@ -138,3 +139,12 @@ VSCode插件：
 ```
 /Applications/ARM/lib/gcc/arm-none-eabi/10.3.1/include/stdint-gcc.h
 ```
+=======
+"compilerPath": "/usr/local/bin/gcc-12"
+```
+
+这样就解决这个问题了（如果使用arm-none-eabi-gcc或clang就会有这个问题）：
+```
+没有找到库：stdint-gcc.h
+```
+>>>>>>> 7ca75c01c249f37af6f4c016d4c3a869c95d83d2
