@@ -50,7 +50,7 @@
 
 ![pcb1](image/pcb1.png)
 
-注意，这25个按键PB并不是一样的，而是分为了3号PCB、2号PCB以及1号PCB。
+注意，这25个按键PCB并不是一样的，而是分为了3号PCB、2号PCB以及1号PCB。
 
 对于1号PCB，其右边的FPC连接座为6P，从上至下的线序为（KEY1/KEY2/KEY3/GND/DIN/5V），而左边的FPC连接座为5P，从上至下的线序为（KEY2/KEY3/GND/DOUT/5V）。右边的6P座直接与主控连接，负责获取RGB灯珠的电源、信号以及传递按键连接。左边的5P座与2号PCB的5P座连接，将RGB电源、信号传递以及按键连接线的中继。
 
@@ -95,6 +95,12 @@ STL文件夹：其内的STL文件可直接进行3D打印。
 ## 固件上传
 
 通过STLINK或其他下载器，将Firmware>Release中的bin文件上传至STM32即可，若需要进行键位的修改，可自行编译HelloWord-keyborad-fw中的文件。
+
+# 友情项目
+
+这里记录了其他爱好者基于本项目进行改进的项目：
+
+https://github.com/Byvm815/Dactyl-HelloWord
 
 # 更新日志
 
